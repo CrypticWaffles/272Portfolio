@@ -14,15 +14,15 @@
     <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/094969d655.js" crossorigin="anonymous"></script>
     
     <!-- Internal Links -->
-    <link rel="stylesheet" href="/css/startStyle.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="/Images/png" sizes="32x32" href="Images/favicon/favicon-32x32.png">
-    <link rel="icon" type="/Images/png" sizes="16x16" href="Images/favicon/favicon-16x16.png">
+    <link rel="icon" type="Images/png" sizes="32x32" href="Images/favicon/favicon-32x32.png">
+    <link rel="icon" type="Images/png" sizes="16x16" href="Images/favicon/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 </head>
 
@@ -31,13 +31,15 @@
         <div class="container">
             <nav>
                 <img src="Images/favicon/favicon-32x32.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Developer</p>
@@ -45,50 +47,122 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    <div class="container-fluid">
 
-            <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-12">
-                <img src="Images/me.png" style="width:250px; margin:0px;">
-                <p>
-                    Miles Griffith<br />
-                    miles dot griffith at Bellevue college dot edu
-                </p>
-            </div><!-- port 1-->
-
-            <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-12">
-                <p>
-                    <span class="strong">Bio<br />
-                        </span>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/me.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
                         Hello! I'm Miles, a 20-year-old African American college student with a goal of getting a bachelor's degree in Software development. 
                         I'm honestly not the best at writing about myself. I've written about this elsewhere as well but I'm interested in coding, reading, and video games.
-                </p>
-            </div> <!-- port 2-->
-
-            <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-12 hidden-xs hidden-sm">
-                Education<br />
-                2022 Issaquah High School <br />
-                2022-Current Bellevue College
-            </div> <!--land 3-->
-            </d!div>
-
-
-            <div class="row-fluid">
-                <div class="col-sm-6 col-lg-6 hidden-sm hidden-md">Interests
-                    <p>
-                        I'm very interested in video games and Web development. 
-                </p>
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                <div class="col-sm-6 col-lg-6 hidden-sm hidden-md">Hobbies
-                    <p>
-                        I enjoy reading Sci-fi or fantasy books, playing video games, and learning Japanese.
-                </p>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Designing & Building websites/interfaces</li>
+                            <li><span>App Development</span><br>Building Android apps</li>
+                        </ul>
                     </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Sept. 2023 - Present</span><br>DriveUp & Go Manager at Safeway</li>
+                            <li><span>Jan. 2023 - Sept. 2023</span><br>DriveUp & Go Shopper at Safeway</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Bellevue College</li>
+                            <li><span>2022</span><br>Issaquah Highschool</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            </d!div>
-
         </div>
+    </div>
+
+    <!-- projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>P1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-code"></i>
+                    <h2>P2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>P3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fcourses-images%2Fwp-content%2Fuploads%2Fsites%2F5348%2F2020%2F11%2F12001449%2Fnoun_image-not-found_3594661-300x275.png&f=1&nofb=1&ipt=836bca7b11abddc00b661548ea49deaf38898ad13dec8337d66736134bf06a81&ipo=images">
+                <div class="layer">
+                    <h3>W1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fcourses-images%2Fwp-content%2Fuploads%2Fsites%2F5348%2F2020%2F11%2F12001449%2Fnoun_image-not-found_3594661-300x275.png&f=1&nofb=1&ipt=836bca7b11abddc00b661548ea49deaf38898ad13dec8337d66736134bf06a81&ipo=images">
+                <div class="layer">
+                    <h3>W2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fcourses-images%2Fwp-content%2Fuploads%2Fsites%2F5348%2F2020%2F11%2F12001449%2Fnoun_image-not-found_3594661-300x275.png&f=1&nofb=1&ipt=836bca7b11abddc00b661548ea49deaf38898ad13dec8337d66736134bf06a81&ipo=images">
+                <div class="layer">
+                    <h3>W3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="bttn">See more</a>
+    </div>
+</div>
+<!--Contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> miles.griffith@bellevuecollege.edu</p>
+                <div class="social-icons">
+                    <a href="https://github.com/CrypticWaffles"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
 </body>
 </html>
