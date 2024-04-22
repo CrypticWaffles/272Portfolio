@@ -167,9 +167,13 @@ nav ul li a:hover::after{
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
 }
-.projects-list div i{
+/*.projects-list div i{
     font-size: 50px;
     margin-bottom: 30px;
+}*/
+.big {
+    font-size: 50px;
+    margin-bottom: 30px; 
 }
 .projects-list div h2{
     font-size: 30px;
@@ -289,7 +293,6 @@ nav ul li a:hover::after{
     color: var(--secondary);
     transform: translateY(-5px);
 }
-
 
 nav .fas{
     display: none;
